@@ -46,6 +46,10 @@ public interface ApiInterface {
     Call<PostUser> postUser(@Field("name") String name,
                             @Field("email") String email,
                             @Field("password") String pass);
+    @FormUrlEncoded
+    @POST("login")
+    Call<PostUser> loginUser(@Field("name") String name,
+                             @Field("email") String email);
 
     //Donelist
     @FormUrlEncoded
