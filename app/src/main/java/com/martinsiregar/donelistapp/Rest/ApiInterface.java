@@ -24,9 +24,6 @@ public interface ApiInterface {
     @GET("kontak_android")
     Call<GetKontak> getKontak();
 
-    @GET("donelist")
-    Call<GetList> getListDone();
-
     @FormUrlEncoded
     @POST("kontak")
     Call<SendKontak> postKontak(@Field("nama") String nama,
@@ -52,6 +49,9 @@ public interface ApiInterface {
                              @Field("email") String email);
 
     //Donelist
+    @GET("donelist")
+    Call<GetList> getListDone();
+
     @FormUrlEncoded
     @POST("donelist")
     Call<PostDonelist> postDonelist(@Field("listname") String itemlist);

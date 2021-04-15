@@ -3,12 +3,8 @@ package com.martinsiregar.donelistapp.Rest;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-/**
- * Created by root on 2/3/17.
- */
-
 public class ApiClient {
-    public static final String BASE_URL = "http://192.168.8.100/donelist-rest-server/api/";
+    public static final String BASE_URL = "https://martinsiregar.com/donelist/api/";
     private static Retrofit retrofit = null;
 
     public static Retrofit getClient() {
