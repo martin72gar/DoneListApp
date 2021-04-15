@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.martinsiregar.donelistapp.EditActivity;
+import com.martinsiregar.donelistapp.EditDonelistActivity;
 import com.martinsiregar.donelistapp.Model.Kontak;
 import com.martinsiregar.donelistapp.Model.ListDone;
 import com.martinsiregar.donelistapp.R;
@@ -32,11 +33,11 @@ public class DoneListAdapter extends RecyclerView.Adapter<DoneListAdapter.MyView
     @Override
     public void onBindViewHolder (MyViewHolder holder, final int position){
         holder.mTextViewId.setText("Id = " + mDoneList.get(position).getId());
-        holder.mTextViewNama.setText("Nama = " + mDoneList.get(position).getNama());
+        holder.mTextViewNama.setText(mDoneList.get(position).getNama());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent mIntent = new Intent(view.getContext(), EditActivity.class);
+                Intent mIntent = new Intent(view.getContext(), EditDonelistActivity.class);
                 mIntent.putExtra("Id", mDoneList.get(position).getId());
                 mIntent.putExtra("Nama", mDoneList.get(position).getNama());
                 view.getContext().startActivity(mIntent);

@@ -37,7 +37,7 @@ public class LoginActivity extends AppCompatActivity {
                 String email = textEmail.getText().toString();
                 String pass = textPassword.getText().toString();
 
-                if (email.equals("android") && pass.equals("1234")) {
+                if (email.equals("martin") && pass.equals("android")) {
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putString("email", email);
                     editor.putString("password", pass);

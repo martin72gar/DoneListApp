@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 
 public class ApiClient {
-    public static final String BASE_URL = "http://192.168.80.135/donelist-rest-server/api/";
+    public static final String BASE_URL = "http://192.168.8.100/donelist-rest-server/api/";
     private static Retrofit retrofit = null;
 
     public static Retrofit getClient() {

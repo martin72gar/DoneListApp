@@ -10,6 +10,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 import com.martinsiregar.donelistapp.Adapter.DoneListAdapter;
 import com.martinsiregar.donelistapp.Adapter.KontakAdapter;
 import com.martinsiregar.donelistapp.Model.GetKontak;
@@ -27,7 +29,6 @@ import retrofit2.Response;
 
 public class DoneListActivity extends AppCompatActivity {
 
-    Button btnAddDoneList;
     ApiInterface mApiInterface;
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
@@ -48,16 +49,14 @@ public class DoneListActivity extends AppCompatActivity {
         ma=this;
         refresh();
 
-
-//        btnAddDoneList = findViewById(R.id.btnAddDoneList);
-
-//        btnAddDoneList.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(DoneListActivity.this, AddDoneListActivity.class);
-//                startActivity(intent);
-//            }
-//        });
+        FloatingActionButton fab = findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DoneListActivity.this, AddDoneListActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
