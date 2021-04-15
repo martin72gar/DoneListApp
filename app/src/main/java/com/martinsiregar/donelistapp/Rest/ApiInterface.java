@@ -9,6 +9,7 @@ package com.martinsiregar.donelistapp.Rest;
 import com.martinsiregar.donelistapp.Model.GetKontak;
 import com.martinsiregar.donelistapp.Model.GetList;
 import com.martinsiregar.donelistapp.Model.PostDonelist;
+import com.martinsiregar.donelistapp.Model.PostUser;
 import com.martinsiregar.donelistapp.Model.SendKontak;
 
 import retrofit2.Call;
@@ -38,6 +39,13 @@ public interface ApiInterface {
     @FormUrlEncoded
     @HTTP(method = "DELETE", path = "kontak", hasBody = true)
     Call<SendKontak> deleteKontak(@Field("id") String id);
+
+    //User
+    @FormUrlEncoded
+    @POST("user_donelist")
+    Call<PostUser> postUser(@Field("name") String name,
+                            @Field("email") String email,
+                            @Field("password") String pass);
 
     //Donelist
     @FormUrlEncoded

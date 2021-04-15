@@ -24,7 +24,7 @@ public class PostUser {
     public User getUser() {
         return mUser;
     }
-    public void setKontak(User User) {
-        mUser = User;
+    public void setUser(User user) {
+        mUser = user;
     }
 }
