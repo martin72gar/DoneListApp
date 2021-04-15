@@ -28,7 +28,7 @@ public class EditDonelistActivity extends AppCompatActivity {
         setContentView(R.layout.activity_edit_donelist);
 
         edtId = (EditText) findViewById(R.id.edtId);
-        edtNama = (EditText) findViewById(R.id.edtNama);
+        edtNama = (EditText) findViewById(R.id.edtName);
         Intent mIntent = getIntent();
         edtId.setText(mIntent.getStringExtra("Id"));
         edtId.setTag(edtId.getKeyListener());

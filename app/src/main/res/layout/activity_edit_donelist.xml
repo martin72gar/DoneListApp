@@ -13,7 +13,7 @@
         android:text="Id : "
         android:textSize="20sp"/>
     <TextView
-        android:id="@+id/tvNama"
+        android:id="@+id/tvName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Item Donelist : "
@@ -27,21 +27,21 @@
         android:hint="Id"
         android:layout_toRightOf="@+id/tvId"
         android:layout_alignBaseline="@+id/tvId"
-        android:layout_alignLeft="@+id/edtNama"/>
+        android:layout_alignLeft="@+id/edtName"/>
     <EditText
-        android:id="@+id/edtNama"
+        android:id="@+id/edtName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Item Donelist"
-        android:layout_toRightOf="@+id/tvNama"
-        android:layout_alignBaseline="@+id/tvNama"/>
+        android:layout_toRightOf="@+id/tvName"
+        android:layout_alignBaseline="@+id/tvName"/>
 
     <LinearLayout
         android:id="@+id/Linearlayout2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_below="@+id/tvNama"
+        android:layout_below="@+id/tvName"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp">

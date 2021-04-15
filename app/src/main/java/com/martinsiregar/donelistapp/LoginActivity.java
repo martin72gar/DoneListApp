@@ -2,9 +2,11 @@ package com.martinsiregar.donelistapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -35,6 +37,7 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin = findViewById(R.id.btnLogin);
 
         sharedPreferences = getSharedPreferences("user_details", MODE_PRIVATE);
+        sharedPreferences.contains("name");
         sharedPreferences.contains("email");
         sharedPreferences.contains("password");
 
@@ -51,6 +54,15 @@ public class LoginActivity extends AppCompatActivity {
                 loginCall.enqueue(new Callback<PostUser>() {
                     @Override
                     public void onResponse(Call<PostUser> call, Response<PostUser> response) {
+//                        Log.d("apaini", response.body().getStatus());
+//                        String name = response.body().getUser().getName();
+
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+//                        editor.putString("name", name);
+                        editor.putString("email", email);
+                        editor.putString("password", pass);
+                        editor.apply();
+
                         Intent intent = new Intent(LoginActivity.this, DoneListActivity.class);
                         startActivity(intent);
                         Toast.makeText(getApplicationContext(), "Login berhasil", Toast.LENGTH_LONG).show();

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".InsertActivity">
     <TextView
-        android:id="@+id/tvNama"
+        android:id="@+id/tvName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Nama : "
@@ -16,15 +16,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Nomor : "
-        android:layout_below="@id/tvNama"
+        android:layout_below="@id/tvName"
         android:textSize="20sp"/>
     <EditText
-        android:id="@+id/edtNama"
+        android:id="@+id/edtName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Nama"
-        android:layout_toRightOf="@+id/tvNama"
-        android:layout_alignBaseline="@+id/tvNama"/>
+        android:layout_toRightOf="@+id/tvName"
+        android:layout_alignBaseline="@+id/tvName"/>
     <EditText
         android:id="@+id/edtNomor"
         android:layout_width="wrap_content"

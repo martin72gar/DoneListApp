@@ -56,7 +56,7 @@ public class KontakAdapter extends RecyclerView.Adapter<KontakAdapter.MyViewHold
         public MyViewHolder(View itemView) {
             super(itemView);
             mTextViewId = (TextView) itemView.findViewById(R.id.tvId);
-            mTextViewNama = (TextView) itemView.findViewById(R.id.tvNama);
+            mTextViewNama = (TextView) itemView.findViewById(R.id.tvName);
             mTextViewNomor = (TextView) itemView.findViewById(R.id.tvNomor);
         }
     }

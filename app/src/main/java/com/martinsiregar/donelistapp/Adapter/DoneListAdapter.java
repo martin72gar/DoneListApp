@@ -8,9 +8,7 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.martinsiregar.donelistapp.EditActivity;
 import com.martinsiregar.donelistapp.EditDonelistActivity;
-import com.martinsiregar.donelistapp.Model.Kontak;
 import com.martinsiregar.donelistapp.Model.ListDone;
 import com.martinsiregar.donelistapp.R;
 
@@ -56,7 +54,7 @@ public class DoneListAdapter extends RecyclerView.Adapter<DoneListAdapter.MyView
         public MyViewHolder(View itemView) {
             super(itemView);
             mTextViewId = (TextView) itemView.findViewById(R.id.tvId);
-            mTextViewNama = (TextView) itemView.findViewById(R.id.tvNama);
+            mTextViewNama = (TextView) itemView.findViewById(R.id.tvName);
         }
     }
 }

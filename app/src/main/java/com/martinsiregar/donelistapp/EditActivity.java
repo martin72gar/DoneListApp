@@ -27,7 +27,7 @@ public class EditActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit);
         edtId = (EditText) findViewById(R.id.edtId);
-        edtNama = (EditText) findViewById(R.id.edtNama);
+        edtNama = (EditText) findViewById(R.id.edtName);
         edtNomor = (EditText) findViewById(R.id.edtNomor);
         Intent mIntent = getIntent();
         edtId.setText(mIntent.getStringExtra("Id"));
