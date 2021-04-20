@@ -2,7 +2,6 @@ package com.martinsiregar.donelistapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -48,6 +47,8 @@ public class LoginActivity extends AppCompatActivity {
                 String pass = textPassword.getText().toString();
                 ApiInterface mApiInterface = ApiClient.getClient().create(ApiInterface.class);
 
+                Log.d("Namanya dari api", email);
+
                 Call<PostUser> loginCall = mApiInterface.loginUser(
                         email,
                         pass);
@@ -61,6 +62,9 @@ public class LoginActivity extends AppCompatActivity {
 //                        editor.putString("name", name);
                         editor.putString("email", email);
                         editor.putString("password", pass);
+//                        String  name = response.body().getUser().getName().toString();
+//                        editor.putString("name", name);
+//                        Log.d("Namanya dari api", response.body().getResult().getName().toString());
                         editor.apply();
 
                         Intent intent = new Intent(LoginActivity.this, DoneListActivity.class);

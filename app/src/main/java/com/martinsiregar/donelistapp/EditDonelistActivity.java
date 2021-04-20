@@ -40,6 +40,7 @@ public class EditDonelistActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Call<PostDonelist> updateDonelistCall = mApiInterface.putDonelist(
+                        edtId.getText().toString(),
                         edtNama.getText().toString());
                 updateDonelistCall.enqueue(new Callback<PostDonelist>() {
                     @Override

@@ -57,7 +57,8 @@ public interface ApiInterface {
     Call<PostDonelist> postDonelist(@Field("listname") String itemlist);
     @FormUrlEncoded
     @PUT("donelist")
-    Call<PostDonelist> putDonelist(@Field("listname") String itemlist);
+    Call<PostDonelist> putDonelist(@Field("id") String id,
+                                   @Field("listname") String itemlist);
     @FormUrlEncoded
     @HTTP(method = "DELETE", path = "donelist", hasBody = true)
     Call<PostDonelist> deleteDonelist(@Field("id") String id);

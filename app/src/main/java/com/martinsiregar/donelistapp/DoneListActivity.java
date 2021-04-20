@@ -41,6 +41,7 @@ public class DoneListActivity extends AppCompatActivity {
 
         sharedPreferences = getSharedPreferences("user_details", MODE_PRIVATE);
         String email = sharedPreferences.getString("email", null);
+        String name = sharedPreferences.getString("name", "and welcome");
 
         TextView labelName = findViewById(R.id.tvName);
         labelName.setText(email);

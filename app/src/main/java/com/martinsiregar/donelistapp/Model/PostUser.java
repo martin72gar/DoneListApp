@@ -8,7 +8,7 @@ public class PostUser {
     @SerializedName("message")
     String message;
     @SerializedName("result")
-    User mUser;
+    User result;
 
     public String getStatus() {
         return status;
@@ -24,10 +24,8 @@ public class PostUser {
         this.message = message;
     }
 
-    public User getUser() {
-        return mUser;
-    }
-    public void setUser(User user) {
-        mUser = user;
+    public User getResult() {return result;}
+    public void setResult(User user) {
+        this.result = user;
     }
 }
